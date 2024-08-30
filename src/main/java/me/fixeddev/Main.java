@@ -112,7 +112,7 @@ public class Main {
                     node = Compiler.compile(array[0]).simplify().toAdditionOnly();
                     extractVariables(i, lastIdx, varMappings, systemMatrix, node);
 
-                    constants[i] = Integer.parseInt(array[1].trim());
+                    constants[i] = Double.parseDouble(array[1].trim());
                     System.out.println(node.coloredString() + " = " + constants[i]);
                     break;
                 } catch (NumberFormatException | JASException e) {
